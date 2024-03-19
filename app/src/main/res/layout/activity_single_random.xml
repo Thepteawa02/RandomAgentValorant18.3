@@ -241,8 +241,7 @@
                     android:layout_width="21dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
 
             </LinearLayout>
@@ -275,7 +274,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
 
             </LinearLayout>
@@ -308,7 +307,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
 
             </LinearLayout>
@@ -341,7 +340,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
 
             </LinearLayout>
@@ -374,7 +373,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
 
             </LinearLayout>
@@ -407,7 +406,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -439,7 +438,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -471,7 +470,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -503,7 +502,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -535,7 +534,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -548,7 +547,7 @@
                     android:id="@+id/imageView16"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/reyna" />
+                    android:src="@drawable/rayna" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -567,7 +566,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -599,7 +598,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -631,7 +630,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -663,7 +662,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -695,7 +694,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -727,7 +726,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -759,7 +758,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -791,7 +790,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -823,7 +822,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -855,7 +854,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -887,7 +886,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -919,7 +918,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 
@@ -951,7 +950,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="8sp"
+                    android:textSize="0dp"
                     android:theme="@style/colored_checkBox" />
             </LinearLayout>
 

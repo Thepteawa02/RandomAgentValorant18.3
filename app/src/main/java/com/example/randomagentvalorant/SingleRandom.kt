@@ -41,6 +41,16 @@ class SingleRandom : AppCompatActivity() {
             findViewById(R.id.check_Iso)
         )
 
+        val agentNames = listOf(
+            "Jett", "Raze", "Breach", "Omen", "Brimstone", "Phoenix", "Sage",
+            "Sova", "Viper", "Cypher", "Rayna", "Killjoy", "Skye", "Yoru", "Astra",
+            "Kayo", "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso"
+        )
+
+        agentcheck.forEachIndexed { index, checkBox ->
+            checkBox.text = agentNames[index]
+        }
+
         val controller: CheckBox = findViewById(R.id.controller)
         val duelist: CheckBox = findViewById(R.id.duelist)
         val initiator: CheckBox = findViewById(R.id.initiator)

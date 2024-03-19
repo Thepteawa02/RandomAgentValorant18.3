@@ -66,9 +66,8 @@
         android:layout_width="351dp"
         android:layout_height="88dp"
         android:background="@drawable/rectangle"
-        android:gravity="top"
+        android:gravity="center|top"
         android:text="SELECT WHAT YOU WANT"
-        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -80,11 +79,26 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <CheckBox
+        android:id="@+id/controller"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/controller_selection"
+        android:button="@null"
+        android:textSize="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <CheckBox
         android:id="@+id/duelist"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/duelist_selection"
         android:button="@null"
+        android:textSize="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.362"
@@ -98,6 +112,7 @@
         android:layout_height="50dp"
         android:background="@drawable/initiator_selection"
         android:button="@null"
+        android:textSize="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.634"
@@ -111,6 +126,7 @@
         android:layout_height="50dp"
         android:background="@drawable/sentinel_selection"
         android:button="@null"
+        android:textSize="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.91"
@@ -181,19 +197,6 @@
         app:layout_constraintStart_toStartOf="@+id/sentinel"
         app:layout_constraintTop_toBottomOf="@+id/sentinel"
         app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/controller"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/controller_selection"
-        android:button="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.652" />
 
     <ScrollView
         android:layout_width="298dp"
@@ -354,7 +357,7 @@
                     android:id="@+id/imageView8"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/brim" />
+                    android:src="@drawable/brimstone" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -547,7 +550,7 @@
                     android:id="@+id/imageView16"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/rayna" />
+                    android:src="@drawable/reyna" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -561,7 +564,7 @@
                     android:textStyle="bold" />
 
                 <CheckBox
-                    android:id="@+id/check_Rayna"
+                    android:id="@+id/check_Reyna"
                     android:layout_width="21dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

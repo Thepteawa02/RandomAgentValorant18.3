@@ -19,6 +19,8 @@ class ResultSingleRandom : AppCompatActivity() {
         val agentimg: ImageView = findViewById(R.id.agentimg)
         val agentname: TextView = findViewById(R.id.agentname)
 
+        val agentNames: List<String>? = intent.getStringArrayListExtra("agentNames")
+
         val randomAgent = intent.getStringExtra("randomAgent")
 
         agentname.text = randomAgent
@@ -26,7 +28,7 @@ class ResultSingleRandom : AppCompatActivity() {
         val imageName = when (randomAgent) {
             "Jett" -> "jett"
             "Raze" -> "raze"
-            "Breach" -> "raze"
+            "Breach" -> "breach"
             "Omen" -> "omen"
             "Brimstone" -> "brimstone"
             "Phoenix" -> "phoenix"
@@ -34,7 +36,7 @@ class ResultSingleRandom : AppCompatActivity() {
             "Sova" -> "sova"
             "Viper" -> "viper"
             "Cypher" -> "cypher"
-            "Rayna" -> "rayna"
+            "Reyna" -> "reyna"
             "Killjoy" -> "killjoy"
             "Skye" -> "skye"
             "Yoru" -> "yoru"
@@ -47,16 +49,18 @@ class ResultSingleRandom : AppCompatActivity() {
             "Gekko" -> "gekko"
             "Deadlock" -> "deadlock"
             "Iso" -> "iso"
-            else -> "Unknown"
-
+            else -> ""
         }
+
         val imageResourceId = resources.getIdentifier(imageName, "drawable", packageName)
         agentimg.setImageResource(imageResourceId)
 
 
         again.setOnClickListener {
-            val randomAgent = getRandomAgent()
-            updateUI(randomAgent)
+            val agentNames = intent.getStringArrayListExtra("agentNames")
+            if (agentNames != null) {
+                updateUI(agentNames)
+            }
         }
 
         record.setOnClickListener {
@@ -70,51 +74,44 @@ class ResultSingleRandom : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
     }
 
-    private fun getRandomAgent(): String {
-        val agents = listOf(
-            "Jett", "Raze", "Breach", "Omen", "Brimstone", "Phoenix", "Sage", "Sova",
-            "Viper", "Cypher", "Rayna", "Killjoy", "Skye", "Yoru", "Astra", "Kayo",
-            "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso"
-        )
-        return agents.random()
-    }
-
-    private fun updateUI(agent: String) {
+    private fun updateUI(agent: ArrayList<String>) {
         val agentimg: ImageView = findViewById(R.id.agentimg)
         val agentname: TextView = findViewById(R.id.agentname)
 
-        agentname.text = agent
+        if (agent.isNotEmpty()) {
+            val randomAgent = agent.random()
+            agentname.text = randomAgent
 
-        val imageName = when (agent) {
-            "Jett" -> "jett"
-            "Raze" -> "raze"
-            "Breach" -> "raze"
-            "Omen" -> "omen"
-            "Brimstone" -> "brimstone"
-            "Phoenix" -> "phoenix"
-            "Sage" -> "sage"
-            "Sova" -> "sova"
-            "Viper" -> "viper"
-            "Cypher" -> "cypher"
-            "Rayna" -> "rayna"
-            "Killjoy" -> "killjoy"
-            "Skye" -> "skye"
-            "Yoru" -> "yoru"
-            "Astra" -> "astra"
-            "Kayo" -> "kayo"
-            "Chamber" -> "chamber"
-            "Neon" -> "neon"
-            "Fade" -> "fade"
-            "Harbor" -> "harbor"
-            "Gekko" -> "gekko"
-            "Deadlock" -> "deadlock"
-            "Iso" -> "iso"
-            else -> "Unknown"
+            val imageName = when (randomAgent) {
+                "Jett" -> "jett"
+                "Raze" -> "raze"
+                "Breach" -> "breach"
+                "Omen" -> "omen"
+                "Brimstone" -> "brimstone"
+                "Phoenix" -> "phoenix"
+                "Sage" -> "sage"
+                "Sova" -> "sova"
+                "Viper" -> "viper"
+                "Cypher" -> "cypher"
+                "Reyna" -> "reyna"
+                "Killjoy" -> "killjoy"
+                "Skye" -> "skye"
+                "Yoru" -> "yoru"
+                "Astra" -> "astra"
+                "Kayo" -> "kayo"
+                "Chamber" -> "chamber"
+                "Neon" -> "neon"
+                "Fade" -> "fade"
+                "Harbor" -> "harbor"
+                "Gekko" -> "gekko"
+                "Deadlock" -> "deadlock"
+                "Iso" -> "iso"
+                else -> ""
+            }
+            val imageResourceId = resources.getIdentifier(imageName, "drawable", packageName)
+            agentimg.setImageResource(imageResourceId)
         }
-        val imageResourceId = resources.getIdentifier(imageName, "drawable", packageName)
-        agentimg.setImageResource(imageResourceId)
     }
 }

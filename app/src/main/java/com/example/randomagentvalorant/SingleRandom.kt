@@ -26,7 +26,7 @@ class SingleRandom : AppCompatActivity() {
             findViewById(R.id.check_Sova),
             findViewById(R.id.check_Viper),
             findViewById(R.id.check_Cypher),
-            findViewById(R.id.check_Rayna),
+            findViewById(R.id.check_Reyna),
             findViewById(R.id.check_Killjoy),
             findViewById(R.id.check_Skye),
             findViewById(R.id.check_Yoru),
@@ -41,9 +41,9 @@ class SingleRandom : AppCompatActivity() {
             findViewById(R.id.check_Iso)
         )
 
-        val agentNames = listOf(
+        val agentNames = mutableListOf(
             "Jett", "Raze", "Breach", "Omen", "Brimstone", "Phoenix", "Sage",
-            "Sova", "Viper", "Cypher", "Rayna", "Killjoy", "Skye", "Yoru", "Astra",
+            "Sova", "Viper", "Cypher", "Reyna", "Killjoy", "Skye", "Yoru", "Astra",
             "Kayo", "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso"
         )
 
@@ -51,33 +51,72 @@ class SingleRandom : AppCompatActivity() {
             checkBox.text = agentNames[index]
         }
 
-        val controller: CheckBox = findViewById(R.id.controller)
-        val duelist: CheckBox = findViewById(R.id.duelist)
-        val initiator: CheckBox = findViewById(R.id.initiator)
-        val sentinel: CheckBox = findViewById(R.id.sentinel)
-
-        val selectedAgent = agentcheck.filter { it.isChecked }
+//        val controller: CheckBox = findViewById(R.id.controller)
+//        val duelist: CheckBox = findViewById(R.id.duelist)
+//        val initiator: CheckBox = findViewById(R.id.initiator)
+//        val sentinel: CheckBox = findViewById(R.id.sentinel)
+//
+//        val controllerCharacters = listOf("Omen", "Brimstone", "Viper", "Astra", "Harbor")
+//        val duelistCharacters = listOf("Jett", "Raze", "Phoenix", "Reyna", "Yoru", "Neon", "Iso")
+//        val initiatorCharacters = listOf("Breach", "Sova", "Skye", "Kayo", "Fade", "Gekko")
+//        val sentinelCharacters = listOf("Sage", "Cypher", "Killjoy", "Chamber", "Deadlock")
+//
+//        controller.text = "Controller"
+//        controllerCharacters.forEach { character ->
+//            val checkBox = CheckBox(this)
+//            checkBox.text = character
+//        }
+//
+//        duelist.text = "Duelist"
+//        duelistCharacters.forEach { character ->
+//            val checkBox = CheckBox(this)
+//            checkBox.text = character
+//        }
+//
+//        initiator.text = "Initiator"
+//        initiatorCharacters.forEach { character ->
+//            val checkBox = CheckBox(this)
+//            checkBox.text = character
+//        }
+//
+//        sentinel.text = "Sentinel"
+//        sentinelCharacters.forEach { character ->
+//            val checkBox = CheckBox(this)
+//            checkBox.text = character
+//        }
 
         random.setOnClickListener {
-            val unselectedAgent = agentcheck.filter { !it.isChecked }
+//            val possibleCharacters = when {
+//                controller.isChecked -> controllerCharacters
+//                duelist.isChecked -> duelistCharacters
+//                initiator.isChecked -> initiatorCharacters
+//                sentinel.isChecked -> sentinelCharacters
+//                else -> agentNames
+//            }
 
-            if (selectedAgent.size > 1) {
-                val randomIndex = Random.nextInt(unselectedAgent.size)
-                val randomAgent = unselectedAgent[randomIndex].text.toString()
-                val intent = Intent(this, ResultSingleRandom::class.java)
-                intent.putExtra("randomAgent", randomAgent)
-                startActivity(intent)
-                finish()
-            } else {
-                val randomIndex = Random.nextInt(unselectedAgent.size)
-                val randomAgent = unselectedAgent[randomIndex].text.toString()
+            if (agentcheck.isNotEmpty()) {
+                val selectedAgents = agentcheck.filter { it.isChecked }
+                selectedAgents.forEach { checkBox ->
+                    val agentName = checkBox.text.toString()
+                    agentNames.remove(agentName)
+                    val randomIndex = Random.nextInt(agentNames.size)
+                    val randomAgent = agentNames[randomIndex]
+                    val intent = Intent(this, ResultSingleRandom::class.java)
+                    intent.putStringArrayListExtra("agentNames", ArrayList(agentNames))
+                    intent.putExtra("randomAgent", randomAgent)
+                    startActivity(intent)
+                    finish()
+                }
+            } else if (agentcheck.isEmpty()){
+                val randomIndex = Random.nextInt(agentNames.size)
+                val randomAgent = agentNames[randomIndex]
                 val intent = Intent(this, ResultSingleRandom::class.java)
                 intent.putExtra("randomAgent", randomAgent)
                 startActivity(intent)
                 finish()
             }
-
         }
+
 
         back.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

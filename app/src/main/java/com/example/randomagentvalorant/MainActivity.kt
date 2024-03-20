@@ -20,9 +20,28 @@ class MainActivity : AppCompatActivity() {
         }
 
         teamRan.setOnClickListener {
+            val team = generateRandomTeam()
             val intent = Intent(this, TeamRandom::class.java)
+            intent.putStringArrayListExtra("team", team)
             startActivity(intent)
-            finish()
         }
+    }
+
+    private fun generateRandomTeam(): ArrayList<String> {
+        val agents = mutableListOf(
+            "Jett", "Raze", "Breach", "Omen", "Brimstone", "Phoenix", "Sage", "Sova",
+            "Viper", "Cypher", "Reyna", "Killjoy", "Skye", "Yoru", "Astra", "Kayo",
+            "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso"
+        )
+        val teamSize = 5
+        val team = ArrayList<String>()
+
+        // สุ่มตัวละครให้กับทีม
+        for (i in 0 until teamSize) {
+            val randomIndex = (0 until agents.size).random()
+            team.add(agents.removeAt(randomIndex))
+        }
+
+        return team
     }
 }

@@ -19,8 +19,6 @@ class ResultSingleRandom : AppCompatActivity() {
         val agentimg: ImageView = findViewById(R.id.agentimg)
         val agentname: TextView = findViewById(R.id.agentname)
 
-        val agentNames: List<String>? = intent.getStringArrayListExtra("agentNames")
-
         val randomAgent = intent.getStringExtra("randomAgent")
 
         agentname.text = randomAgent
@@ -65,6 +63,7 @@ class ResultSingleRandom : AppCompatActivity() {
 
         record.setOnClickListener {
             val intent = Intent(this, SingleRecord::class.java)
+            intent.putExtra("randomAgent", randomAgent)
             startActivity(intent)
             finish()
         }

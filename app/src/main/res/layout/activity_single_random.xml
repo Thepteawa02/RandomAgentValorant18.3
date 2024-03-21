@@ -226,7 +226,7 @@
                     android:id="@+id/imageView4"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/jett" />
+                    android:src="@drawable/jett"/>
 
                 <TextView
                     android:id="@+id/textView2"

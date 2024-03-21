@@ -27,7 +27,7 @@ class SingleRecord : AppCompatActivity() {
 
         val randomAgent = intent.getStringExtra("randomAgent")
 
-        val imageName = when (randomAgent) {
+        val imageName1 = when (randomAgent) {
             "Jett" -> "jett"
             "Raze" -> "raze"
             "Breach" -> "breach"
@@ -53,9 +53,10 @@ class SingleRecord : AppCompatActivity() {
             "Iso" -> "iso"
             else -> ""
         }
-        val imageResourceId1 = resources.getIdentifier(imageName, "drawable", packageName)
+        val imageResourceId1 = resources.getIdentifier(imageName1, "drawable", packageName)
         agentimg1.setImageResource(imageResourceId1)
         agentname1.text = randomAgent
+
 
         val imageName2 = when (randomAgent) {
             "Jett" -> "jett"
@@ -83,7 +84,7 @@ class SingleRecord : AppCompatActivity() {
             "Iso" -> "iso"
             else -> ""
         }
-        val imageResourceId2 = resources.getIdentifier(imageName, "drawable", packageName)
+        val imageResourceId2 = resources.getIdentifier(imageName2, "drawable", packageName)
         agentimg2.setImageResource(imageResourceId2)
         agentname2.text = randomAgent
 
@@ -113,7 +114,7 @@ class SingleRecord : AppCompatActivity() {
             "Iso" -> "iso"
             else -> ""
         }
-        val imageResourceId3 = resources.getIdentifier(imageName, "drawable", packageName)
+        val imageResourceId3 = resources.getIdentifier(imageName3, "drawable", packageName)
         agentimg3.setImageResource(imageResourceId3)
         agentname3.text = randomAgent
 
@@ -143,7 +144,7 @@ class SingleRecord : AppCompatActivity() {
             "Iso" -> "iso"
             else -> ""
         }
-        val imageResourceId4 = resources.getIdentifier(imageName, "drawable", packageName)
+        val imageResourceId4 = resources.getIdentifier(imageName4, "drawable", packageName)
         agentimg4.setImageResource(imageResourceId4)
         agentname4.text = randomAgent
 
@@ -173,9 +174,10 @@ class SingleRecord : AppCompatActivity() {
             "Iso" -> "iso"
             else -> ""
         }
-        val imageResourceId5 = resources.getIdentifier(imageName, "drawable", packageName)
+        val imageResourceId5 = resources.getIdentifier(imageName5, "drawable", packageName)
         agentimg5.setImageResource(imageResourceId5)
         agentname5.text = randomAgent
+
 
         back.setOnClickListener {
             val intent = Intent(this, SingleRandom::class.java)
